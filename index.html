@@ -50,6 +50,7 @@
     }
     .gradient-text {
       background: linear-gradient(90deg, #2563eb, #4ade80);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.9;
@@ -130,8 +131,7 @@
   <section id="home" class="min-h-screen flex items-center justify-center bg-cover bg-center relative overflow-hidden" style="background-image: url('images/hero-bg.png');">
     <div id="particles-js"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center hero-content py-16">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-blue-600 fade-in">Mazhar Technology</h1>
-      <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-white fade-in">Afghanistan’s Premier Innovator in Robotics and Technology</p>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white fade-in">Mazhar Technology</h1>      <p class="text-lg sm:text-xl lg:text-2xl mb-8 text-white fade-in">Afghanistan’s Premier Innovator in Robotics and Technology</p>
       <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-semibold text-base sm:text-lg hover:bg-blue-700 transition fade-in hover-scale">Join Our Mission</a>
     </div>
   </section>
@@ -344,7 +344,6 @@
       }
     );
 
-<<<<<<< HEAD
     // Navigation highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -361,41 +360,26 @@
           });
         }
       });
-    }, { threshold: 0.5, rootMargin: '-50px 0px -50px 0px' });
+    }, { threshold: 0.6, rootMargin: '-50px 0px -50px 0px' });
 
     sections.forEach(section => navObserver.observe(section));
 
-    // Typed.js for Contact section heading
-    const typed = new Typed('#typed', {
-      strings: ['Innovate with Us', 'Shape the Future', 'Empower Communities', 'Build Tomorrow'],
-      typeSpeed: 20,
-      backSpeed: 10,
-      backDelay: 1200,
-      loop: true,
-      onComplete: (self) => {
-        if (self.arrayPos === self.strings.length - 1) {
-          self.stop();
-          setTimeout(() => {
-            self.start();
-          }, 4000);
-        }
-      }
-    });
-=======
-    // Typed.js for Contact section heading
 const typed = new Typed('#typed', {
-  strings: ['Ready to Streamline Your Rentals?', 'Still Juggling Spreadsheets?', 'What if Your Tools Rented Themselves?', 'Ready to Streamline Your Rentals?'],
-  typeSpeed: 15,
-  backSpeed: 7,
-  backDelay: 1000,
+  strings: ['Innovate with Us', 'Shape the Future', 'Empower Communities', 'Build Tomorrow'],
+  typeSpeed: 20,
+  backSpeed: 10,
+  backDelay: 1200,
   loop: true,
-  onLastStringBackspaced: () => {
-    setTimeout(() => {
-      typed.reset();
-    }, 5000); // 5 seconds delay
+  onComplete: (self) => {
+    if (self.arrayPos === self.strings.length - 1) {
+      self.stop();
+      setTimeout(() => {
+        self.start();
+      }, 4000);
+    }
   }
 });
->>>>>>> parent of 11cea68 (typed.js tweaked to stop and restart after 5 seconds)
   </script>
 </body>
 </html>
+
