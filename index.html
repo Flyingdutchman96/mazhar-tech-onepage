@@ -344,6 +344,7 @@
       }
     );
 
+<<<<<<< HEAD
     // Navigation highlighting
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -380,6 +381,21 @@
         }
       }
     });
+=======
+    // Typed.js for Contact section heading
+const typed = new Typed('#typed', {
+  strings: ['Ready to Streamline Your Rentals?', 'Still Juggling Spreadsheets?', 'What if Your Tools Rented Themselves?', 'Ready to Streamline Your Rentals?'],
+  typeSpeed: 15,
+  backSpeed: 7,
+  backDelay: 1000,
+  loop: true,
+  onLastStringBackspaced: () => {
+    setTimeout(() => {
+      typed.reset();
+    }, 5000); // 5 seconds delay
+  }
+});
+>>>>>>> parent of 11cea68 (typed.js tweaked to stop and restart after 5 seconds)
   </script>
 </body>
 </html>
